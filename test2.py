@@ -49,6 +49,7 @@ class MainWindow(QMainWindow):
         self.lnEdit.setText(self.cmBox.currentText())
 
         self.cmBox.currentTextChanged.connect(self.lnEdit.setText)
+        self.lsWidget.currentTextChanged.connect(self.text_change)
 
     def window_title_change(self):
         new_window_title = choice(self.window_titles)
@@ -67,6 +68,8 @@ class MainWindow(QMainWindow):
         print(s == Qt.Checked)
         print(s)
 
+    def text_change(self,s):
+        print(f"Valore = {s}")
 
 app = QApplication(sys.argv)
 win = MainWindow()
