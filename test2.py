@@ -16,6 +16,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
 
         self.num_time = 0
+        print("ciao a tutti")
 
         self.setWindowTitle("My app")
         self.windowTitleChanged.connect(self.the_window_title_is_changed)

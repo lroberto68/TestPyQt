@@ -15,6 +15,9 @@ class MainWindow(QMainWindow):
         self.pbClick.setText("Clicked")
         self.setEnabled(False)
         self.setWindowTitle(self.windowTitle() + " one time")
+        print (self.pbClick.text)
+        print(dir(MainWindow))
+        
 
 
 app = QApplication(sys.argv)
